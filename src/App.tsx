@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
-import TodoForm from "./components/TodoForm";
-import { TodoList } from "./components/TodoList";
+import { TodoForm } from "./TodoForm";
+import { TodoList } from "./TodoList";
 
 const initialTodos: Array<Todo> = [
   { title: "Go to sleep", completed: false },
@@ -24,9 +24,14 @@ function App() {
     setTodos(newTodos);
   };
 
+  const addTodo: AddTodo = (newTodo) => {
+    newTodo.trim() !== "" &&
+      setTodos([...todos, { title: newTodo, completed: false }]);
+  };
+
   return (
     <React.Fragment>
-      <TodoForm />
+      <TodoForm addTodo={addTodo} />
       <TodoList todos={todos} toggleTodo={toggleTodo} />
     </React.Fragment>
   );
