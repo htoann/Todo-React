@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./App.css";
 import { TodoForm } from "./TodoForm";
 import { TodoList } from "./TodoList";
-import useFetch from "./useFetch";
 
 const initialTodos: Array<Todo> = [
   { title: "Go to sleep", completed: false },
@@ -32,6 +31,7 @@ function App() {
 
   return (
     <React.Fragment>
+      <h1>Todo App</h1>
       <TodoForm addTodo={addTodo} />
       <TodoList todos={todos} toggleTodo={toggleTodo} />
     </React.Fragment>

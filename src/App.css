@@ -6,8 +6,64 @@
   color: #333;
   text-align: center;
   font-size: 30px;
+  list-style: none;
+  margin: 20px;
 }
 
 #root {
+  background: linear-gradient(to right, #005c97, #363795);
+  display: inline-block;
   text-align: center;
+  margin-top: 30px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+h1 {
+  color: white;
+  font-size: 50px;
+}
+
+ul {
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+li {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+label {
+  display: block;
+  background-color: rgb(140, 146, 196);
+  border-radius: 5px;
+  background-size: contain;
+  text-align: left;
+}
+
+input {
+  text-align: left;
+  outline: none;
+  margin-left: 40px;
+  padding-left: 10px;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+  font-size: 26px;
+}
+
+button {
+  margin-top: 10px;
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 26px;
+  margin-bottom: 50px;
+  margin-right: 40px;
 }
